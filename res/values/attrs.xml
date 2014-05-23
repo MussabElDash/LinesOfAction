@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Square">
+        <attr name="Y_axis_i" format="integer" />
+        <attr name="X_axis_j" format="integer" />
+    </declare-styleable>
+
+</resources>

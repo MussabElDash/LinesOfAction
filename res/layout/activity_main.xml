@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ice"
+    android:gravity="center"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/lines" />
+
+    <Button
+        android:id="@+id/singlePlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/singlebutton" />
+
+    <Button
+        android:id="@+id/twoPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/singlePlay"
+        android:layout_below="@+id/levelNo"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/twobutton" />
+
+    <Button
+        android:id="@+id/howtoplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/twoPlay"
+        android:layout_below="@+id/twoPlay"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/howbutton" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/singlePlay"
+        android:layout_alignRight="@+id/singlePlay"
+        android:layout_below="@+id/singlePlay" />
+
+    <TextView
+        android:id="@+id/levelNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:textColor="#000000"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

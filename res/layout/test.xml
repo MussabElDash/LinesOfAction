@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ice"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/box"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/frame1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sky" >
+
+            <Button
+                android:id="@+id/undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/undobutton" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/undo"
+                android:layout_toRightOf="@+id/menu"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/lines" />
+
+            <Button
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/menubutton" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <layouts.Board
+        android:id="@+id/board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </layouts.Board>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|center_horizontal" >
+
+        <com.google.ads.AdView
+            android:id="@+id/ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="a151e1f9140523a"
+            ads:loadAdCreate="true" >
+        </com.google.ads.AdView>
+    </LinearLayout>
+
+</LinearLayout>
